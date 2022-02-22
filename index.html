@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="fontawesome-free-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="chart.js/Chart.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Tamam Muhammad</title>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(0,0,0,0,0.0);">
+        <div class="container d-flex">
+          <a class="navbar-brand" href="#">
+            <img src="img/tamamuhammad.png" width="50px">  
+            <span>Tamam Muhammad</span>
+        </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#academics">Academics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#achievements">Achievements</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacts">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section class="header" style="background-color: #5d956f; margin-top: -80px; padding: 150px 0 100px 0; height: 60vh; margin-bottom: 30vh">
+        <div class="container">
+            <div class="card">
+                <div class="row p-5">
+                    <div class="col-md-8 d-flex justify-content-center">
+                    <img src="img/wisuda5.png" width="480" alt="">
+                    </div>
+                    <div class="col-md-4 d-flex flex-wrap">
+                    <small>HELLO WORLD, I'AM</small>
+                    <h1>TAMAM MUHAMMAD</h1>
+                    <h6>Amateur Full-stack Developer</h6>
+                    <p style="color:grey; text-align: justify;">I am a child of 3 siblings. When this Portfolio was created I was 18 years old and currently studying at the Yogyakarta Technological University. I have had some experience in the realm of website or application development.</p>
+                    <p style="color:grey; text-align: justify;">Below is my portfolio until 2022 and has the potential to grow in the following years. There's still a lot that I haven't written yet, you can find it on my github repository and you can also contact me via the data I've provided in the contact section.</p>
+                    <p style="color:grey; text-align: justify;">Thanks, Don't Forget the Semicolon!;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5">
+        <div class="container">
+            <div class="row text-center mx-auto my-5" style="border-bottom: 1px solid #5d956f ;width: 100px">
+                <h4>SKILLS</h4>
+            </div>
+            <div class="row px-5">
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6>BY CHART OF PROGRAMMING LANGUAGE</h6>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6>BY PROGRESS OF EXPERIENCE</h6>
+                        </div>
+                        <div class="card-body">
+                            <div id="html" class="row my-1">
+                                <div class="col-2">
+                                    <label for="html">HTML</label>
+                                </div>
+                                <div class="col-8">
+                                    <div class="progress" style="height: 24px;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="36" aria-valuemin="0" aria-valuemax="40" style="width: 90%; height: 24px; background-color: #f56954;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <h6>4Y</h6>
+                                </div>
+                            </div>
+                            <div id="css" class="row my-1">
+                                <div class="col-2">
+                                    <label for="css">CSS</label>
+                                </div>
+                                <div class="col-8">
+                                    <div class="progress" style="height: 24px;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="40" style="width: 85%; height: 24px; background-color: #00a65a;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <h6>3Y</h6>
+                                </div>
+                            </div>
+                            <div id="java" class="row my-1">
+                                <div class="col-2">
+                                    <label for="java">Java</label>
+                                </div>
+                                <div class="col-8">
+                                    <div class="progress" style="height: 24px;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="40" style="width: 25%; height: 24px; background-color: #3c8dbc;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <h6>10M</h6>
+                                </div>
+                            </div>
+                            <div id="python" class="row my-1">
+                                <div class="col-2">
+                                    <label for="python">Python</label>
+                                </div>
+                                <div class="col-8">
+                                    <div class="progress" style="height: 24px;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="40" style="width: 7.5%; height: 24px; background-color: #00c0ef;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <h6>3M</h6>
+                                </div>
+                            </div>
+                            <div id="js" class="row my-1">
+                                <div class="col-2">
+                                    <label for="js">JavaScript</label>
+                                </div>
+                                <div class="col-8">
+                                    <div class="progress" style="height: 24px;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="40" style="width: 50%; height: 24px; background-color: #f39c12;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <h6>1Y</h6>
+                                </div>
+                            </div>
+                            <div id="sql" class="row my-1">
+                                <div class="col-2">
+                                    <label for="sql">SQL</label>
+                                </div>
+                                <div class="col-8">
+                                    <div class="progress" style="height: 24px;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="40" style="width: 37.5%; height: 24px; background-color: #d2d6de;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <h6>1Y</h6>
+                                </div>
+                            </div>
+                            <div id="php" class="row my-1">
+                                <div class="col-2">
+                                    <label for="php">PHP</label>
+                                </div>
+                                <div class="col-8">
+                                    <div class="progress" style="height: 24px;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="40" style="width: 62.5%; height: 24px; background-color: #ffabab;"></div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <h6>2Y</h6>
+                                </div>
+                            </div>
+                            <div id="c" class="row my-1">
+                                <div class="col-2">
+                                    <label for="c">C++</label>
+                                </div>
+                                <div class="col-8">
+                                    <div class="progress" style="height: 24px;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="40" style="width: 2.5%; height: 24px; background-color: #6eb5ff"></div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <h6>1M</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="academics" style="background-color: #5d956f;">
+        <div class="container">
+            <div class="row text-center mx-auto pt-5 mb-5 text-white" style="border-bottom: 1px solid #fff ;width: 175px">
+                <h4>ACADEMICS</h4>
+            </div>
+            <div class="row"> 
+                <ul class="list">
+                    <li style="margin-bottom: 60px; position:relative" type="none">
+                        <span></span>
+                        <div class="media d-flex text-white" style="align-items:center; justify-content:space-evenly">
+                            <div style="width: 300px; text-align:right">
+                                <p style="padding-top: 20px;">August 2007 - July 2009</p>
+                            </div>
+                            <div class="media-body" style="width: 300px">
+                                <h4>Kindergarten</h4>
+                                <p style="margin-bottom: 0!important;">Islamic Kindergarten Muslimat NU Karangsari</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="margin-bottom: 60px; position:relative" type="none">
+                        <span></span>
+                        <div class="media d-flex text-white" style="align-items:center; justify-content:space-evenly">
+                            <div style="width: 300px; text-align:right">
+                                <p style="padding-top: 20px;">July 2009 - June 2015</p>
+                            </div>
+                            <div class="media-body" style="width: 300px">
+                                <h4>Elementary School</h4>
+                                <p style="margin-bottom: 0!important;">Islamic Elementary School Karangsari</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="margin-bottom: 60px; position:relative" type="none">
+                        <span></span>
+                        <div class="media d-flex text-white" style="align-items:center; justify-content:space-evenly">
+                            <div style="width: 300px; text-align:right">
+                                <p style="padding-top: 20px;">August 2015 - May 2018</p>
+                            </div>
+                            <div class="media-body" style="width: 300px">
+                                <h4>Junior High School</h4>
+                                <p style="margin-bottom: 0!important;">Islamic Junior High School YAWAPI Bojong</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="margin-bottom: 60px; position:relative" type="none">
+                        <span></span>
+                        <div class="media d-flex text-white" style="align-items:center; justify-content:space-evenly">
+                            <div style="width: 300px; text-align:right">
+                                <p style="padding-top: 20px">July 2018 - April 2021</p>
+                            </div>
+                            <div class="media-body" style="width: 300px">
+                                <h4>Vocational High School</h4>
+                                <p style="margin-bottom: 0!important;">Vocational High School Syafi'i Akrom</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="margin-bottom: 60px; position:relative" type="none">
+                        <span></span>
+                        <div class="media d-flex text-white" style="align-items:center; justify-content:space-evenly">
+                            <div style="width: 300px; text-align:right">
+                                <p style="padding-top: 20px;">September 2021 - present</p>
+                            </div>
+                            <div class="media-body" style="width: 300px">
+                                <h4>University</h4>
+                                <p style="margin-bottom: 0!important;">University of Technology Yogyakarta</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="py-5">
+        <div class="container">
+            <div class="row text-center mx-auto my-3" style="border-bottom: 1px solid #5d956f ;width: 175px">
+                <h4>ACHIEVEMENTS</h4>
+            </div>
+            <div class="row px-5 justify-content-center">
+                <div class="col-md-10">
+                    <div class="card">
+                        <div class="card-header">
+                            <form action="" class="d-flex align-items-baseline" style="justify-content: space-evenly;">
+                                <label for="rank">Ranking</label>
+                                <select name="rank" id="rank" class="form-select w-50">
+                                    <option value="1">Rank 1</option>
+                                    <option value="2">Rank 2</option>
+                                    <option value="3">Rank 3</option>
+                                    <option value="4">Rank 4 and above</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="card-body p-0 table-responsive-xl">
+                            <table class="table table-striped table-hover m-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name of Competition</th>
+                                        <th>Rank</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr id="first">
+                                        <td>1</td>
+                                        <td>Microsoft Excel Contest Pekalongan 2017</td>
+                                        <td>1st</td>
+                                        <td>1st place in an unofficial competition activity about Microsoft Excel with a landslide score and almost flawless result. I participated in this activity when I was still studying in junior high school and was already in the scope of one district</td>
+                                    </tr>
+                                    <tr id="first">
+                                        <td>2</td>
+                                        <td>LKS Pekalongan City 2020</td>
+                                        <td>1st</td>
+                                        <td>In my last year of vocational high school, I was given the opportunity to take the LKS once again. This time the competition is more competitive because it uses the most popular PHP framework, Laravel 8. Honestly, I've only known the framework for 2 weeks. And I am very grateful to be the best from a district that follows it.</td>
+                                    </tr>
+                                    <tr id="second">
+                                        <td>1</td>
+                                        <td>LKS Pekalongan City 2019</td>
+                                        <td>2nd</td>
+                                        <td>LKS, which stands for Student Competency Competition, is a very prestigious competition among vocational high schools. I started at the district level with a light project on native php and some tasks on mysql. Managed to get 2nd place and only still lost to my own classmate with a very thin score.</td>
+                                    </tr>
+                                    <tr id="third">
+                                        <td>1</td>
+                                        <td>Science Week of STMIK Pekalongan</td>
+                                        <td>3rd</td>
+                                        <td>Starting the world of programming, I took part in a competition based on front end with HTML, CSS and CSS Framework (Bootstrap). This competition is an unofficial competition held by a technology campus which was participated by various participants at the vocational high school level from 4 districts. I got 3rd place out of 30+ participants who followed it</td>
+                                    </tr>
+                                    <tr id="above">
+                                        <td>1</td>
+                                        <td>LKS Central Java 2021</td>
+                                        <td>5th</td>
+                                        <td>Several months after the district-wide LKS, the province-wide LKS began. This competition was held for 3 days with 4 quite difficult tasks regarding Front End, Back End, Server Side and even the CMS system. I followed with full preparation. Unfortunately, in the middle of the race, I felt tired and didn't feel well. As a result, I only reached the top 5 out of 30+ provinces. But I am quite happy with my achievement because it is the best achievement of my school in web technologies.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5" style="background-color: #5d956f;">
+        <div class="row text-center mx-auto mb-5 text-white" style="border-bottom: 1px solid #fff ;width: 175px">
+            <h4>PROJECTS</h4>
+        </div>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" style="width: 7.5%;">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <div class="container">
+                    <div class="carousel-item active">
+                        <div class="col-md-3 px-2 d-block" style="float:left">
+                            <div class="card mb-2">
+                                <img class="card-img-top" src="img/pro-mii.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">MII</h4>
+                                    <p class="card-text">Some website about an elementary school. used to manage information from school</p>
+                                    <a href="https://github.com/tamamuhammad/mii" class="btn btn-primary" target="_blank">View Source</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 px-2 d-block" style="float:left">
+                            <div class="card mb-2">
+                                <img class="card-img-top" src="img/pro-sart.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Marketplace</h4>
+                                    <p class="card-text">A simple marketplace that sells several products and still uses whatsapp transactions</p>
+                                    <a href="https://github.com/tamamuhammad/marketplace" class="btn btn-primary" target="_blank">View Source</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 px-2 d-block" style="float:left">
+                            <div class="card mb-2">
+                                <img class="card-img-top" src="img/pro-bkk.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">BKKSA</h4>
+                                    <p class="card-text">A website to handle dynamic ex-students with interactive displays for users and admins</p>
+                                    <a href="https://github.com/tamamuhammad/bkksa" class="btn btn-primary" target="_blank">View Source</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 px-2 d-block" style="float:left">
+                            <div class="card mb-2">
+                                <img class="card-img-top" src="img/pro-lsp.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">LSP SMKSA</h4>
+                                    <p class="card-text">Static website with bootstrap about lsp of a school. LSP is a Professional Certification Institute</p>
+                                    <a href="https://github.com/tamamuhammad/lspsmksa" class="btn btn-primary" target="_blank">View Source</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3 px-2 d-block" style="float:left">
+                            <div class="card mb-2">
+                                <img class="card-img-top" src="img/pro-512.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Wild 512</h4>
+                                    <p class="card-text">A small game that adopts from the famous 2048 game with Pure CSS and Vanilla JS</p>
+                                    <a href="https://github.com/tamamuhammad/wild512" class="btn btn-primary" target="_blank">View Source</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 px-2 d-block" style="float:left">
+                            <div class="card mb-2">
+                                <img class="card-img-top" src="img/pro-bmi.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Body Mass Index</h4>
+                                    <p class="card-text">Simple application to calculate ideal weight and height with standard BMI formula</p> 
+                                    <a href="https://github.com/tamamuhammad/bmi" class="btn btn-primary" target="_blank">View Source</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 px-2 d-block" style="float:left">
+                            <div class="card mb-2">
+                                <img class="card-img-top" src="img/pro-cal.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Calculator</h4>
+                                    <p class="card-text">A simple calculator using vanilla js with pastel color. More interactive by being able to use the keyboard</p>
+                                    <a href="https://github.com/tamamuhammad/calculator" class="btn btn-primary" target="_blank">View Source</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 px-2 d-block" style="float:left">
+                            <div class="card mb-2">
+                                <img class="card-img-top" src="img/pro-phy.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Phyton</h4>
+                                    <p class="card-text">A simple game that adopts from the famous game called snake xenzia with vanilla js</p>
+                                    <a href="https://github.com/tamamuhammad/phyton" class="btn btn-primary" target="_blank">View Source</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" style="width: 7.5%;background-color:#5d956f">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: rgba(0,0,0,0.1);" id="contacts" class="py-5">
+        <div class="container">
+            <div class="row text-center mx-auto mb-5" style="border-bottom: 1px solid #5d956f ;width: 175px">
+                <h4>CONTACTS</h4>
+            </div>
+            <div class="row px-5">
+                <div class="col-md-4 mb-5">
+                    <h6>CURRENT LOCATION</h6>
+                    <hr>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1240.0877263618704!2d110.36056331099392!3d-7.824946222802664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a57724cf71b47%3A0x7b28479ca9c69b22!2sPondok%20Pesantren%20Al-Munawwir%20Komplek%20L!5e0!3m2!1sid!2sid!4v1637828647663!5m2!1sid!2sid" width="100%" height="384" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <h6>SOCIAL MEDIA</h6>
+                    <hr>
+                    <div class="row my-2" style="justify-content: space-evenly;">
+                        <div class="col-1">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                        <div class="col-10 px-0">
+                            <a href="https://fb.com/mukhtaz67" target="_blank" style="text-decoration: none; color: black">Muhammad Tamam</a>
+                        </div>
+                    </div>
+                    <div class="row my-2" style="justify-content: space-evenly;">
+                        <div class="col-1">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="col-10 px-0">
+                            <a href="https://instagram.com/el.tamamy" target="_blank" style="text-decoration: none; color: black">@el.tamamy</a>
+                        </div>
+                    </div>
+                    <div class="row my-2" style="justify-content: space-evenly;">
+                        <div class="col-1">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="col-10 px-0">
+                            <a href="https://twitter.com/eltamamiy" target="_blank" style="text-decoration: none; color: black">@eltamamiy</a>
+                        </div>
+                    </div>
+                    <div class="row my-2" style="justify-content: space-evenly;">
+                        <div class="col-1">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="col-10 px-0">
+                            <a href="https://github.com/tamamuhammad" target="_blank" style="text-decoration: none; color: black">tamamuhammad</a>
+                        </div>
+                    </div>
+                    <div class="row my-2" style="justify-content: space-evenly;">
+                        <div class="col-1">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="col-10 px-0">
+                            <a href="https://linkedin.com/in/tamam-muhammad-5745b4221" target="_blank" style="text-decoration: none; color: black">Tamam Muhammad</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h6>LINK UP</h6>
+                    <hr>
+                    <div class="row my-2" style="justify-content: space-evenly;">
+                        <div class="col-1">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="col-10 px-0">
+                            <a href="https://t.me/6289688241425" target="_blank" style="text-decoration: none; color: black">+62 896 8824 1425</a>
+                        </div>
+                    </div>
+                    <div class="row my-2" style="justify-content: space-evenly;">
+                        <div class="col-1">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
+                        <div class="col-10 px-0">
+                            <a href="mailto:maztamam67@gmail.com" target="_blank" style="text-decoration: none; color: black">maztamam67@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="row my-2" style="justify-content: space-evenly;">
+                        <div class="col-1">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="col-10 px-0">
+                            <a href="https://goo.gl/maps/HyWezNS4C7V2U9tX7" target="_blank" style="text-decoration: none; color: black">Jl. Kauman No. 36, RT 006/RW 003, Karangsari, Bojong, Pekalongan, Indonesia 51156</a>
+                        </div>
+                    </div>
+                    <div class="row my-2" style="justify-content: space-evenly;">
+                        <div class="col-1">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="col-10 px-0">
+                            <a href="https://maps.google.com/maps?ll=-7.824658,110.360907&z=18&t=m&hl=id&gl=ID&mapclient=embed&cid=8874421803922397986" target="_blank" style="text-decoration: none; color: black">Jl. KH. Ali Maksum Tromol Pos 5, Krapyak Kulon, Krapyak, Sewon, Bantul, Yogyakarta 51188</a>
+                        </div>
+                    </div>
+                    <div class="row mt-5 text-center" style="justify-content:center">
+                        <img src="img/tamamuhammad.png" style="width: 144px">
+                        <small class="mt-4">Copyright &copy; 2022 Tamam Muhammad</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="chart.js/Chart.min.js"></script>
+      <script src="fontawesome-free-6.0.0-web/js/all.min.js"></script>
+      <script>
+          $(function(){
+              const rank = document.querySelector('#rank')
+              const first = document.querySelectorAll('#first')
+              const second = document.querySelector('#second')
+              const third = document.querySelector('#third')
+              const above = document.querySelector('#above')
+              first.forEach(e => {
+                        e.classList.remove('d-none')
+                    });
+                second.classList.add('d-none')
+                third.classList.add('d-none')
+                above.classList.add('d-none')
+
+              rank.addEventListener('input', function(){
+                  if (rank.value == '1'){
+                    first.forEach(e => {
+                        e.classList.remove('d-none')
+                    });
+                    second.classList.add('d-none')
+                    third.classList.add('d-none')
+                    above.classList.add('d-none')
+                  } else if (rank.value == '2'){
+                    first.forEach(e => {
+                        e.classList.add('d-none')
+                    });
+                    second.classList.remove('d-none')
+                    third.classList.add('d-none')
+                    above.classList.add('d-none')
+                  } else if (rank.value == '3'){
+                    first.forEach(e => {
+                        e.classList.add('d-none')
+                    });
+                    second.classList.add('d-none')
+                    third.classList.remove('d-none')
+                    above.classList.add('d-none')
+                  } else {
+                    first.forEach(e => {
+                        e.classList.add('d-none')
+                    });
+                    second.classList.add('d-none')
+                    third.classList.add('d-none')
+                    above.classList.remove('d-none')
+                  }
+              })
+            var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
+    var donutData        = {
+      labels: [
+          'HTML', 
+          'CSS',
+          'Java',
+          'Python', 
+          'JavaScript', 
+          'SQL',
+          'PHP', 
+          'C++' 
+      ],
+      datasets: [
+        {
+          data: [75,65,5,40,60,25,80,10],
+          backgroundColor : ['#f56954', '#00a65a', '#3c8dbc', '#00c0ef', '#f39c12', '#d2d6de', '#ffabab', '#6eb5ff'],
+        }
+      ]
+    }
+    var donutOptions     = {
+      maintainAspectRatio : false,
+      responsive : true,
+    }
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    var donutChart = new Chart(donutChartCanvas, {
+      type: 'doughnut',
+      data: donutData,
+      options: donutOptions      
+    })
+          })
+      </script>
+    </body>
+    </html>
