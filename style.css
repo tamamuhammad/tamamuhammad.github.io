@@ -48,6 +48,39 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+  .header img {
+    width: 240px !important;
+  }
+
+  #skills {
+    padding: 45rem 0px 5rem 0px !important;
+  }
+
+  #skills .container {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  #skills .container .row.px-5,
+  #achievements .container .row.px-5 {
+    padding: 0 !important;
+  }
+
+  ul.list {
+    margin: 0 !important;
+  }
+
+  .media div {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  .media div p {
+    font-size: smaller;
+  }
+}
+
 ul.list {
   max-width: 60vw;
   margin: 0 auto;
