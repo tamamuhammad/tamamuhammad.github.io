@@ -48,17 +48,18 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .header img {
     width: 240px !important;
   }
 
   #skills {
-    padding: 45rem 0px 5rem 0px !important;
+    padding: 20rem 0px 5rem 0px !important;
   }
 
   #skills .container {
-    padding: 0;
+    padding-right: 12px;
+    padding-left: 12px;
     max-width: 100%;
   }
 
@@ -68,6 +69,7 @@
   }
 
   ul.list {
+    max-width: 100vw;
     margin: 0 !important;
   }
 
@@ -78,6 +80,18 @@
 
   .media div p {
     font-size: smaller;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #skills {
+    padding: 30rem 0px 5rem 0px !important;
+  }
+
+  .media div {
+    width: 110px !important;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 }
 
