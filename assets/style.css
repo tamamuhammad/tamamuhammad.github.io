@@ -495,7 +495,7 @@ footer .container .row a p:hover {
     }
     
     p {
-        font-size: 1.05rem;
+        font-size: 1rem;
         letter-spacing: .025rem;
         line-height: 1.75rem;
     }
@@ -504,8 +504,18 @@ footer .container .row a p:hover {
         padding: 0;
     }
 
+    nav.navbar {
+        width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     nav .navbar-nav {
         flex-direction: row;
+    }
+
+    nav .navbar-nav .nav-item.logo {
+        display: none;
     }
 
     nav .navbar-nav .nav-item .nav-link {
@@ -518,7 +528,7 @@ footer .container .row a p:hover {
     }
 
     nav .navbar-nav .nav-item a.nav-link {
-        font-size: 1rem;
+        font-size: .75rem;
     }
 
     #about header {
@@ -531,21 +541,37 @@ footer .container .row a p:hover {
         height: fit-content!important;
     }
 
+    #about header .container-fluid .row {
+        width: 100%;
+    }
+
+    #about header .container-fluid .row .col-12 {
+        padding: 0;
+    }
+
     #about header .container-fluid .row .col-12 .hello-world {
         display: none;
     }
 
     #about header .container-fluid .row .col-12 .myname, #projects header .container-fluid .row .col-12 .myname, #contacts header .container-fluid .row .col-12 .myname {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     #about header .container-fluid .row .col-12 .stars {
-        right: 10%;
+        right: 7%;
         top: 15%;
     }
 
+    #projects header .container-fluid, #contacts header .container-fluid {
+        padding: 0 .75rem;
+    }
+
+    #projects header .container-fluid .row .col-12 {
+        padding: 0;
+    }
+
     #projects header .container-fluid .row .col-12 .stars, #contacts header .container-fluid .row .col-12 .stars {
-        right: 22.5%;
+        right: 20%;
         top: 15%;
     }
 
@@ -572,7 +598,7 @@ footer .container .row a p:hover {
     }
 
     #about main .container .row div h2 {
-        margin-top: 4rem;
+        margin-top: 3rem;
     }
     
     #about main .container .row div .educations {
@@ -612,30 +638,28 @@ footer .container .row a p:hover {
         text-align: left;
     }
 
-    #about main .container-fluid .row {
-        width: 100%;
-        padding: 0 3.75rem;
+    #about main .container .row div, #about main .container-fluid .row div, #projects main .container .row div, #projects main .container-fluid .row div, #contacts main .container .row div, #contacts main .container-fluid .row div  {
+        padding: 0 1.75rem;
     }
 
-    #about main .container .row div, #about main .container-fluid .row div, #projects main .container .row div, #projects main .container-fluid .row div, #contacts main .container .row div, #contacts main .container-fluid .row div  {
-        padding: 0 3.25rem;
+    #about main .container-fluid .row {
+        width: 100%;
     }
 
     #about main .container-fluid .row div.collaborate {
         margin-top: 2rem;
-        padding-left: 0!important;
-        padding-right: 0!important;
+        padding: 0 2.5rem;
     }
 
     #about main .container-fluid .row.skills {
         border-radius: 0rem;
-        padding: 0rem 1rem;
+        padding: 0rem;
         margin: 2rem 0;
         width: 100%;
     }
     
     #about main .container-fluid .row.skills div {
-        padding: 2rem 2rem 2rem 2rem;
+        padding: 2rem 1.75rem 2rem 1.75rem;
     }
     
     #about main .container-fluid .row.skills div .row {
@@ -647,7 +671,7 @@ footer .container .row a p:hover {
     #about main .container-fluid .row.skills div .row img {
         padding: 0 .75rem;
         margin: 0;
-        height: 32px;
+        height: 24px;
         width: auto;
     }
     
@@ -664,8 +688,12 @@ footer .container .row a p:hover {
         color: hsla(160, 52%, 71%, .5);
     }
 
+    #projects main .container-fluid {
+        padding: 0 .75rem
+    }
+
     #projects main .container-fluid .row {
-        padding-top: 0rem;
+        padding: 0rem;
         margin-top: -2.5rem;
     }
 
@@ -673,17 +701,27 @@ footer .container .row a p:hover {
         padding: 0 1.5rem!important;
     }
 
+    #projects main .container-fluid .row div .project-card {
+        margin: .75rem .5rem;
+    }
+
     #projects main .container-fluid .row div .project-card h5 {
         margin-top: 2rem;
     }
 
+    #projects main .container-fluid .row div .project-card .project-image {
+        min-height: 96px;
+    }
+
     #contacts main .container-fluid .row {
         padding: 3rem 0rem;
-        margin: -2.5rem 2rem 5rem 2rem;
+        margin: -2.5rem 0 5rem 0;
+        border-radius: 0;
     } 
 
     #contacts main .container-fluid .row div {
         margin: 1rem 0;
+        padding: 0 2rem;
     }
 
     #contacts main .container-fluid .row div .contact-form {
@@ -695,6 +733,6 @@ footer .container .row a p:hover {
     } 
 
     footer {
-        margin: 2.25rem;
+        margin: 2.25rem 1rem;
     }
   }
