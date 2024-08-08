@@ -454,8 +454,13 @@ footer {
     margin: 10rem 0 5rem 0;
 }
 
+footer br {
+    display: none;
+}
+
 footer .container .row .img-footer {
     width: 180px;
+    margin-left: -.25rem;
 }
 
 footer .container .row h5 {
@@ -531,6 +536,16 @@ footer .container .row a p:hover {
         font-size: .75rem;
     }
 
+    @keyframes down {
+        from {padding-top: 0rem;}
+        to {padding-top: .5rem;}
+    }
+
+    @keyframes down2 {
+        from {padding-top: 0rem;}
+        to {padding-top: 3.5rem;}
+    }
+
     #about header {
         padding-top: .5rem;
         height: fit-content!important;
@@ -539,6 +554,7 @@ footer .container .row a p:hover {
     #projects header, #contacts header {
         padding-top: 3.5rem;
         height: fit-content!important;
+        animation-name: down2, show;
     }
 
     #about header .container-fluid .row {
@@ -720,8 +736,12 @@ footer .container .row a p:hover {
     } 
 
     #contacts main .container-fluid .row div {
-        margin: 1rem 0;
+        margin: .5rem 0;
         padding: 0 2rem;
+    }
+    
+    #contacts main .container-fluid .row div p {
+        margin: .5rem 0;
     }
 
     #contacts main .container-fluid .row div .contact-form {
@@ -734,5 +754,17 @@ footer .container .row a p:hover {
 
     footer {
         margin: 2.25rem 1rem;
+    }
+    
+    footer .img-footer {
+        margin-bottom: .5rem;
+    }
+
+    footer p {
+        line-height: 1.5rem;
+    }
+
+    footer br {
+        display: block;
     }
   }
