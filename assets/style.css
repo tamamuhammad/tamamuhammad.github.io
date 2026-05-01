@@ -1,770 +1,260 @@
+/* --- 1. GLOBAL STYLES & FONTS --- */
 * {
-    margin: 0 auto;
-    box-sizing: border-box;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: Acorn-Bold;
-    src: url(font/Acorn-Bold.woff);
-}
-@font-face {
-    font-family: Acorn-ExtraLight;
-    src: url(font/Acorn-ExtraLight.woff);
-}
-@font-face {
-    font-family: Acorn-Light;
-    src: url(font/Acorn-Light.woff);
-}
-@font-face {
-    font-family: Acorn-Medium;
-    src: url(font/Acorn-Medium.woff);
-}
-@font-face {
-    font-family: Acorn-Regular;
-    src: url(font/Acorn-Regular.woff);
-}
-@font-face {
-    font-family: Acorn-SemiBold;
-    src: url(font/Acorn-SemiBold.woff);
-}
-@font-face {
-    font-family: Acorn-Thin;
-    src: url(font/Acorn-Thin.woff);
+  font-family: Gadey;
+  src: url(fonts/gadey-regular.otf);
 }
 
 @font-face {
-    font-family: SF-Pro-Display-Black;
-    src: url(font/SF-Pro-Display-Black.woff);
+  font-family: Unytour;
+  src: url(fonts/Unytour-Regular.otf);
 }
+
+/* SF Pro Display Family (Black to Ultralight) */
 @font-face {
-    font-family: SF-Pro-Display-Bold;
-    src: url(font/SF-Pro-Display-Bold.woff);
-}
-@font-face {
-    font-family: SF-Pro-Display-Heavy;
-    src: url(font/SF-Pro-Display-Heavy.woff);
-}
-@font-face {
-    font-family: SF-Pro-Display-Light;
-    src: url(font/SF-Pro-Display-Light.woff);
-}
-@font-face {
-    font-family: SF-Pro-Display-Medium;
-    src: url(font/SF-Pro-Display-Medium.woff);
-}
-@font-face {
-    font-family: SF-Pro-Display-Regular;
-    src: url(font/SF-Pro-Display-Regular.woff);
-}
-@font-face {
-    font-family: SF-Pro-Display-SemiBold;
-    src: url(font/SF-Pro-Display-SemiBold.woff);
-}
-@font-face {
-    font-family: SF-Pro-Display-Thin;
-    src: url(font/SF-Pro-Display-Thin.woff);
-}
-@font-face {
-    font-family: SF-Pro-Display-Ultralight;
-    src: url(font/SF-Pro-Display-Ultralight.woff);
+  font-family: SF-Mono;
+  src: url(fonts/SF-Mono.otf);
 }
 
 body {
-    color: hsla(160, 52%, 71%, 1);
-    background-color: hsla(158, 23%, 18%, 1);
+  color: #254128;
+  background-color: hsla(36, 31%, 90%, 1);
 }
 
-h1 {
-    letter-spacing: -4px;
-}
-
-h2 {
-    font-family: Acorn-SemiBold;
-    font-size: 3rem;
-}
-
-h3 {
-    color: hsla(160, 52%, 71%, .5);
-    font-family: Acorn-SemiBold;
-    font-size: 2.5rem;
-}
-
-h4 {
-    color: hsla(160, 52%, 71%, 1);
-    font-family: Acorn-SemiBold;
-    font-size: 2rem;
-}
-
-h5 {
-    font-family: SF-Pro-Display-Regular;
-    font-size: 1.25rem;
-    margin-top: 40px;
+.dark body {
+  color: #9caf88;
+  background-color: #254128;
 }
 
 p {
-    font-family: SF-Pro-Display-Regular;
-    font-size: 1.15rem;
-    letter-spacing: .025rem;
-    line-height: 2rem;
-    color: white;
+  font-family: Unytour;
+  font-size: 1.15rem;
+  letter-spacing: 0.025rem;
+  line-height: 2rem;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .container {
-    max-width: 1180px;
+  max-width: 1180px;
 }
 
 #foreground {
-    position: absolute;
-    background: linear-gradient(to bottom, hsla(158, 23%, 18%, 0) 0%, hsla(158, 23%, 18%, .013) 9.7%, hsla(158, 23%, 18%, .049) 18.1%, hsla(158, 23%, 18%, .104) 25.5%, hsla(158, 23%, 18%, .175) 31.9%, hsla(158, 23%, 18%, .259) 37.7%, hsla(158, 23%, 18%, .352) 43%, hsla(158, 23%, 18%, .45) 47.9%, hsla(158, 23%, 18%, .55) 52.8%, hsla(158, 23%, 18%, .648) 57.7%, hsla(158, 23%, 18%, .741) 63%, hsla(158, 23%, 18%, .825) 68.7%, hsla(158, 23%, 18%, .896) 75%, hsla(158, 23%, 18%, .951) 82.2%, hsla(158, 23%, 18%, .987) 90.5%, hsl(158, 23%, 18%) 100%);;
-    background-color: #36603b;
-    z-index: -1;
-    top: 0;
-    width: 100%;
-    height: 100vh!important;
+  position: absolute;
+  background: linear-gradient(
+    to bottom,
+    hsl(88, 30%, 77%) 0%,
+    hsl(88, 30%, 78%) 9.7%,
+    hsl(88, 28%, 79%) 18.1%,
+    hsl(88, 26%, 80%) 25.5%,
+    hsl(88, 28%, 81%) 31.9%,
+    hsl(88, 30%, 82%) 37.7%,
+    hsl(88, 31%, 83%) 43%,
+    hsl(88, 31%, 84%) 47.9%,
+    hsl(88, 31%, 85%) 52.8%,
+    hsl(86, 31%, 86%) 57.7%,
+    hsl(76, 31%, 87%) 63%,
+    hsl(56, 31%, 88%) 68.7%,
+    hsl(46, 31%, 89%) 75%,
+    hsla(36, 31%, 90%, 1) 100%
+  );
+  background-color: hsla(36, 31%, 90%, 1);
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 100vh !important;
+}
+
+.dark #foreground {
+  background: linear-gradient(
+    to bottom,
+    hsl(126, 28%, 40%) 0%,
+    /* Paling cerah di atas */ hsl(126, 28%, 38%) 9.7%,
+    hsl(126, 28%, 36%) 18.1%,
+    hsl(126, 28%, 35%) 25.5%,
+    hsl(126, 28%, 33%) 31.9%,
+    hsl(126, 28%, 31%) 37.7%,
+    hsl(126, 28%, 29%) 43%,
+    hsl(126, 28%, 28%) 47.9%,
+    hsl(126, 28%, 26%) 52.8%,
+    hsl(126, 28%, 25%) 57.7%,
+    hsl(126, 28%, 24%) 63%,
+    hsl(126, 28%, 23%) 68.7%,
+    hsl(126, 28%, 22%) 75%,
+    hsl(126, 28%, 21%) 82.2%,
+    hsl(126, 28%, 20.5%) 90.5%,
+    hsl(126, 28%, 20%) 100%
+  );
+  background-color: #254128;
 }
 
 nav {
-   margin-top: 20px; 
-   padding: 0!important;
+  margin-top: 20px;
+  padding: 0 !important;
 }
 
-nav .navbar-nav {
-    padding: calc(1.25rem - 10px);
-    border-radius: 50px;
-    transition: all .2s linear;
+nav .nav-inner {
+  transition: all 0.2s linear;
 }
 
-nav .navbar-nav.navbar-blur {
-    background: hsla(158, 23%, 18%, .7);
-    backdrop-filter: blur(20px) saturate(1.7);
-    -webkit-backdrop-filter: blur(20px) saturate(1.7);
+nav .nav-inner ul.scrolled-nav,
+nav .nav-inner ul li.logo {
+  background: hsla(36, 31%, 90%, 0.7);
+  backdrop-filter: blur(20px) saturate(1.7);
+  -webkit-backdrop-filter: blur(20px) saturate(1.7);
 }
 
-nav .navbar-nav .nav-item .nav-link {
-    border-radius: 1.5rem;
-    color: hsla(159, 42%, 88%, 1);
-    margin: 0 5px;
-    padding: calc(1rem - 10px) 1.25rem;
-    font-family: SF-Pro-Display-Regular;
-    font-size: 1.15rem;
+.dark nav .nav-inner ul.scrolled-nav,
+.dark nav .nav-inner ul li.logo {
+  background: hsla(126, 28%, 20%, 0.7);
+  backdrop-filter: blur(20px) saturate(1.7);
+  -webkit-backdrop-filter: blur(20px) saturate(1.7);
 }
 
-nav .navbar-nav .nav-item .nav-link:hover {
-    background: hsla(160, 52%, 71%, .1)
+nav .nav-inner ul li.logo {
+  border-radius: 1.5rem;
 }
 
-nav .navbar-nav .nav-item .nav-link.active {
-    background: hsla(160, 52%, 71%, .1)
+nav .nav-inner ul a {
+  color: hsl(109, 20%, 30%);
+  font-family: Unytour;
 }
 
+.dark nav .nav-inner ul a {
+  color: hsl(109, 20%, 88%);
+}
+
+nav .nav-inner ul a:hover,
+nav .nav-inner ul a.active,
+nav .nav-inner ul button:hover {
+  background: hsla(36, 31%, 90%, 0.7);
+}
+
+.dark nav .nav-inner ul a:hover,
+.dark nav .nav-inner ul a.active,
+.dark nav .nav-inner ul button:hover {
+  background: hsla(109, 23%, 45%, 0.15);
+}
+
+/* --- 3. ANIMATIONS --- */
 @keyframes down {
-    from {padding-top: 4rem;}
-    to {padding-top: 7.5rem;}
+  from {
+    transform: translateY(4rem) !important;
+  }
+  to {
+    transform: translateY(7.5rem) !important;
+  }
 }
-
 @keyframes show {
-    0% { opacity: 0; }
-    50% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
 @keyframes zoom {
-    0% { transform: scale(0); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
-#about header, #projects header, #contacts header {
-    padding-top: 7.5rem;
-    min-height: 40vh!important;
-    text-align: center;
-    animation-name: down, show;
-    animation-duration: .5s;
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+    scale: 0.9;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    scale: 1;
+  }
 }
 
-#about header .container-fluid, #about header .container-fluid .row, #projects header .container-fluid, #projects header .container-fluid .row, #contacts header .container-fluid, #contacts header .container-fluid .row {
-    height: 40vh;
-    max-height: 40vh;
-}
-
-#about header .container-fluid .row, #projects header .container-fluid .row, #contacts header .container-fluid .row {
-    align-items: center;
-}
-
-#about header .container-fluid .row .col-12 .hello-world, #about header .container-fluid .row .col-12 .myname, #projects header .container-fluid .row .col-12 .myname, #contacts header .container-fluid .row .col-12 .myname {
-    margin-bottom: 0;
-}
-
-#about header .container-fluid .row .col-12 .hello-world {
-    font-family: Acorn-Light;
-    font-size: 2rem;
-    line-height: 1rem;
-    letter-spacing: 2px;
-}
-
-#about header .container-fluid .row .col-12 .myname, #projects header .container-fluid .row .col-12 .myname, #contacts header .container-fluid .row .col-12 .myname {
-    font-family: Acorn-SemiBold;
-    font-size: 7.5rem;
-}
-
-#about header .container-fluid .row .col-12 .stars {
-    position: absolute;
-    right: 22.5%;
-    top: 25%;
-    animation-name: zoom;
-    animation-duration: 2s;
-}
-
-#projects header .container-fluid .row .col-12 .stars {
-    position: absolute;
-    right: 32%;
-    top: 18%;
-    animation-name: zoom;
-    animation-duration: 2s;
-}
-
-#contacts header .container-fluid .row .col-12 .stars {
-    position: absolute;
-    right: 32%;
-    top: 18%;
-    animation-name: zoom;
-    animation-duration: 2s;
-}
-
-#projects header .container-fluid .row .col-12 p, #contacts header .container-fluid .row .col-12 p {
-    max-width: 720px;
-}
-
-#about main, #projects main, #contacts main {
-    animation-name: show;
-    animation-duration: 1s;
-}
-
-#about main .container .row, #about main .container-fluid .row, #projects main .container .row, #projects main .container-fluid .row, #contacts main .container .row, #contacts main .container-fluid .row {
-    align-items: center;
-}
-
-#about main .container .row div, #about main .container-fluid .row div, #projects main .container .row div, #projects main .container-fluid .row div, #contacts main .container .row div, #contacts main .container-fluid .row div  {
-    padding: 0 .5rem;
-}
-
-#about main .container .row div img  {
-    border-radius: 180px 180px 0 0;
-    box-shadow: 0 0 0 1px hsla(160, 52%, 71%, .2);
-}
-
-#about main .container .row div p, #about main .container-fluid .row div p, #projects main .container .row div p, #projects main .container-fluid .row div p, #contacts main .container .row div p, #contacts main .container-fluid .row div p  {
-    margin: 1.5rem 0 0 0;
-}
-
-#about main .container .row div .educations {
-    display: flex;
-    padding-left: 0;
-    margin-top: 5rem;
-}
-
-#about main .container .row div .educations::before {
-    content: "";
-    height: 5px;
-    width: 100%;
-    max-width: 1180px;
-    background: rgba(255, 255, 255, 0.2);
-    position: absolute;
-}
-
-#about main .container .row div .educations .education {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#about main .container .row div .educations .education span {
-    height: 24px;
-    width: 24px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    position: absolute;
-    transform: translate(0, -10px);
-}
-
-#about main .container .row div .educations .education span::before {
-    content: "";
-    height: 12px;
-    width: 12px;
-    background: #fff;
-    border-radius: 50%;
-    position: absolute;
-    transform: translate(6px, 6px)!important;
-}
-
-#about main .container .row div .educations .education .institution {
-    font-family: Acorn-Medium;
-    color: white;
-    text-align: center;
-}
-
-#about main .container-fluid .row div.collaborate  {
-    margin-top: 5rem;
-}
-
-#about main .container-fluid .row div.collaborate p  {
-    max-width: 720px;
-}
-
-#about main .container-fluid .row.skills {
-    background: hsla(160, 52%, 71%, .05);
-    backdrop-filter: blur(10px) saturate(1.3);
-    border-radius: 4rem;
-    padding: 3rem 8.5rem;
-    margin: 3.25rem;
-    align-items: flex-start;
-}
-
-#about main .container-fluid .row.skills div {
-    padding: 2rem 0 2rem 2rem;
-}
-
-#about main .container-fluid .row.skills div .row {
-    padding: 0;
-    margin-top: .25rem;
-    margin-bottom: 1rem;
-}
-
-#about main .container-fluid .row.skills div .row img {
-    padding: 0 .75rem;
-    margin: 0;
-    height: 32px;
-    width: auto;
-}
-
-#about main .container-fluid .row.skills div.cv h4 a {
-    color: hsla(160, 52%, 71%, 1);
-    text-decoration: underline;
-}
-
-#about main .container-fluid .row.skills div.cv p a {
-    color: hsla(160, 52%, 71%, 1);
-}
-
-#about main .container-fluid .row.skills div.cv a:hover {
-    color: hsla(160, 52%, 71%, .5);
-}
-
-#projects main .container-fluid .row {
-    padding: 3rem .6rem;
-    justify-content: space-between;
-}
-
-#projects main .container-fluid .row div .project-card {
-    box-shadow: 0 0 0 1px hsla(160, 52%, 71%, .2);
-    border-radius: 1rem;
-    background: hsla(160, 52%, 71%, .05);
-    backdrop-filter: blur(10px) saturate(1.3);
-    padding: .5rem 2.6rem 0 2.6rem;
-    margin: 1.3rem .8rem;
-    overflow: hidden;
-}
-
-#projects main .container-fluid .row div .project-card:hover {
-    box-shadow: 0 0 0 1.5px hsla(160, 52%, 71%, .3);
-    margin-top: 1rem;
-    transition: margin-top .5s, box-shadow .1s
-}
-
-#projects main .container-fluid .row div .project-card .project-title {
-    color: hsla(160, 52%, 71%, 1);
-    font-family: Acorn-SemiBold;
-}
-
-#projects main .container-fluid .row div .project-card .project-desc {
-    margin: .75rem 0 1.75rem 0;
-    line-height: 1.75rem;
-}
-
-#projects main .container-fluid .row div .project-card .project-image {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    position: relative;
-    width: 100%;
-    min-height: 144px;
-}
-
-#projects main .container-fluid .row div .project-card .project-image .img-card {
-    width: 100%;
-    box-shadow: 0 0 0 1px hsla(160, 52%, 71%, .2);
-    margin: 0 auto;
-    position: absolute;
-}
-
-#contacts main .container-fluid .row {
-    background: hsla(160, 52%, 71%, .05);
-    backdrop-filter: blur(10px) saturate(1.3);
-    border-radius: 4rem;
-    padding: 3rem 8.5rem;
-    margin: 3.25rem;
-    align-items: center;
-}
-
-#contacts main .container-fluid .row .contact-form {
-    padding-left: 5rem;
-}
-
-#contacts main .container-fluid .row .contact-form input, #contacts main .container-fluid .row .contact-form select, #contacts main .container-fluid .row .contact-form textarea {
-    background: hsla(158, 23%, 18%, .9);
-    backdrop-filter: blur(20px) saturate(1.7);
-    -webkit-backdrop-filter: blur(20px) saturate(1.7);
-    border: none;
-    box-shadow: 0 0 0 2.5px hsla(160, 52%, 71%, .025);
-    margin: 1rem 0;
-    color: white;
-    font-family: SF-Pro-Display-Regular;
-    border-radius: 1.5rem;
-}
-
-#contacts main .container-fluid .row .contact-form input, #contacts main .container-fluid .row .contact-form select, #contacts main .container-fluid .row .contact-form textarea {
-    padding: 1rem 1.25rem;
-}
-
-#contacts main .container-fluid .row .contact-form input::placeholder, #contacts main .container-fluid .row .contact-form textarea::placeholder {
-    color: rgba(255, 255, 255, .5);
-}
-
-#contacts main .container-fluid .row .contact-form select:invalid {
-    color: rgba(255, 255, 255, .5);
-}
-
-#contacts main .container-fluid .row .contact-form button {
-    background: hsla(160, 52%, 71%, 1);
-    backdrop-filter: blur(20px) saturate(1.7);
-    -webkit-backdrop-filter: blur(20px) saturate(1.7);
-    border-radius: 1.25rem;
-    float: right;
-    padding: .5rem 1.5rem;
-}
-
-#contacts main .container-fluid .row .contact-form button:hover {
-    background: hsla(160, 52%, 71%, .5);
-}
-
-footer {
-    margin: 10rem 0 5rem 0;
-}
-
-footer br {
-    display: none;
-}
-
-footer .container .row .img-footer {
-    width: 180px;
-    margin-left: -.25rem;
-}
-
-footer .container .row h5 {
-    font-family: SF-Pro-Display-Medium;
-    margin-bottom: 1.5rem;
-}
-
-footer .container .row a {
-    text-decoration: none;
-    color: white;
-}
-
-footer .container .row a p:hover {
-    color: hsla(160, 52%, 71%, 1);
-}
-
-@media screen and (max-width: 960px) {
-    h1 {
-        letter-spacing: -2px;
+@layer utilities {
+  @keyframes slowZoom {
+    0%,
+    100% {
+      transform: scale(1);
     }
-
-    h2 {
-        font-size: 2rem;
-    }
-    
-    h3 {
-        font-size: 2.5rem;
-    }
-    
-    h4 {
-        font-size: 1.5rem;
-    }
-    
-    h5 {
-        font-size: 1rem;
-        margin-top: 40px;
-    }
-    
-    p {
-        font-size: 1rem;
-        letter-spacing: .025rem;
-        line-height: 1.75rem;
-    }
-
-    .container-fluid {
-        padding: 0;
-    }
-
-    nav.navbar {
-        width: 100vw;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    nav .navbar-nav {
-        flex-direction: row;
-    }
-
-    nav .navbar-nav .nav-item.logo {
-        display: none;
-    }
-
-    nav .navbar-nav .nav-item .nav-link {
-        margin: 0 2.5px;
-        padding: calc(1rem - 10px) .75rem;
-    }
-
-    nav .navbar-nav .nav-item img.nav-link {
-        width: 96px
-    }
-
-    nav .navbar-nav .nav-item a.nav-link {
-        font-size: .75rem;
-    }
-
-    @keyframes down {
-        from {padding-top: 0rem;}
-        to {padding-top: .5rem;}
-    }
-
-    @keyframes down2 {
-        from {padding-top: 0rem;}
-        to {padding-top: 3.5rem;}
-    }
-
-    #about header {
-        padding-top: .5rem;
-        height: fit-content!important;
-    }
-
-    #projects header, #contacts header {
-        padding-top: 3.5rem;
-        height: fit-content!important;
-        animation-name: down2, show;
-    }
-
-    #about header .container-fluid .row {
-        width: 100%;
-    }
-
-    #about header .container-fluid .row .col-12 {
-        padding: 0;
-    }
-
-    #about header .container-fluid .row .col-12 .hello-world {
-        display: none;
-    }
-
-    #about header .container-fluid .row .col-12 .myname, #projects header .container-fluid .row .col-12 .myname, #contacts header .container-fluid .row .col-12 .myname {
-        font-size: 3rem;
-    }
-
-    #about header .container-fluid .row .col-12 .stars {
-        right: 7%;
-        top: 15%;
-    }
-
-    #projects header .container-fluid, #contacts header .container-fluid {
-        padding: 0 .75rem;
-    }
-
-    #projects header .container-fluid .row .col-12 {
-        padding: 0;
-    }
-
-    #projects header .container-fluid .row .col-12 .stars, #contacts header .container-fluid .row .col-12 .stars {
-        right: 20%;
-        top: 15%;
-    }
-
-    #projects header .container-fluid .row .col-12 p, #contacts header .container-fluid .row .col-12 p {
-        max-width: 90vw!important;
-        padding-bottom: 0;
-    }
-
-    #about header .container-fluid .row .col-12 .stars img, #projects header .container-fluid .row .col-12 .stars img, #contacts header .container-fluid .row .col-12 .stars img {
-        width: 32px;
-    }
-
-    #about main {
-        margin-top: -10vh;
-    }
-
-    #about main .container .row {
-        align-items: center;
-    }
-
-    #about main .container .row div.img-div img {
-        width: 100%;
-        border-radius: 6rem 6rem 0 0;
-    }
-
-    #about main .container .row div h2 {
-        margin-top: 3rem;
-    }
-    
-    #about main .container .row div .educations {
-        margin-top: 2rem;
-        margin-bottom: 0;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    #about main .container .row div .educations::before {
-        height: 100%;
-        width: 5px;
-        max-height: 40%!important;
-    }
-    
-    #about main .container .row div .educations .education {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-left: 2rem;
-        margin: 2rem auto;
-    }
-    
-    #about main .container .row div .educations .education span {
-        transform: translate(-41.5px, 20px);
-    }
-    
-    #about main .container .row div .educations .education span::before {
-        transform: translate(6px, 6px)!important;
-    }
-    
-    #about main .container .row div .educations .education h5 {
-        text-align: left;
-        margin: auto 0;
-    }
-
-    #about main .container .row div .educations .education .institution {
-        text-align: left;
-    }
-
-    #about main .container .row div, #about main .container-fluid .row div, #projects main .container .row div, #projects main .container-fluid .row div, #contacts main .container .row div, #contacts main .container-fluid .row div  {
-        padding: 0 1.75rem;
-    }
-
-    #about main .container-fluid .row {
-        width: 100%;
-    }
-
-    #about main .container-fluid .row div.collaborate {
-        margin-top: 2rem;
-        padding: 0 2.5rem;
-    }
-
-    #about main .container-fluid .row.skills {
-        border-radius: 0rem;
-        padding: 0rem;
-        margin: 2rem 0;
-        width: 100%;
-    }
-    
-    #about main .container-fluid .row.skills div {
-        padding: 2rem 1.75rem 2rem 1.75rem;
-    }
-    
-    #about main .container-fluid .row.skills div .row {
-        padding: 0;
-        margin-top: .25rem;
-        margin-bottom: 1rem;
-    }
-    
-    #about main .container-fluid .row.skills div .row img {
-        padding: 0 .75rem;
-        margin: 0;
-        height: 24px;
-        width: auto;
-    }
-    
-    #about main .container-fluid .row.skills div.cv h4 a {
-        color: hsla(160, 52%, 71%, 1);
-        text-decoration: underline;
-    }
-    
-    #about main .container-fluid .row.skills div.cv p a {
-        color: hsla(160, 52%, 71%, 1);
-    }
-    
-    #about main .container-fluid .row.skills div.cv a:hover {
-        color: hsla(160, 52%, 71%, .5);
-    }
-
-    #projects main .container-fluid {
-        padding: 0 .75rem
-    }
-
-    #projects main .container-fluid .row {
-        padding: 0rem;
-        margin-top: -2.5rem;
-    }
-
-    #projects main .container-fluid .row div {
-        padding: 0 1.5rem!important;
-    }
-
-    #projects main .container-fluid .row div .project-card {
-        margin: .75rem .5rem;
-    }
-
-    #projects main .container-fluid .row div .project-card h5 {
-        margin-top: 2rem;
-    }
-
-    #projects main .container-fluid .row div .project-card .project-image {
-        min-height: 96px;
-    }
-
-    #contacts main .container-fluid .row {
-        padding: 3rem 0rem;
-        margin: -2.5rem 0 5rem 0;
-        border-radius: 0;
-    } 
-
-    #contacts main .container-fluid .row div {
-        margin: .5rem 0;
-        padding: 0 2rem;
-    }
-    
-    #contacts main .container-fluid .row div p {
-        margin: .5rem 0;
-    }
-
-    #contacts main .container-fluid .row div .contact-form {
-        padding: 0;
-    }
-
-    #contacts main .container-fluid .row div .contact-form .form-group {
-        padding: 0;
-    } 
-
-    footer {
-        margin: 2.25rem 1rem;
-    }
-    
-    footer .img-footer {
-        margin-bottom: .5rem;
-    }
-
-    footer p {
-        line-height: 1.5rem;
-    }
-
-    footer br {
-        display: block;
+    50% {
+      transform: scale(1.15);
     }
   }
+  .animate-slow-zoom {
+    animation: slowZoom 5s ease-in-out infinite;
+  }
+}
+
+#about main,
+#works main,
+#contact main {
+  view-timeline-name: --revealing-section;
+  view-timeline-axis: block;
+
+  animation: reveal linear forwards;
+  animation-timeline: --revealing-section;
+
+  animation-range: entry 0% cover 12%;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.rich-select,
+.rich-select::picker(select) {
+  appearance: base-select;
+}
+
+.rich-select::picker-icon {
+  display: none;
+}
+
+.rich-select option::checkmark {
+  display: none;
+}
+
+.rich-select::picker(select) {
+  background: rgba(35, 56, 45, 0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(156, 175, 136, 0.2);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  padding-top: 0.75rem !important;
+}
+
+.dark .rich-select::picker(select) {
+  background: rgba(35, 56, 45, 0.95);
+}
+
+.rich-select:open .select-arrow {
+  transform: rotate(180deg); /* Putar panah ke atas */
+}
+.rich-select:open .select-btn {
+  border-radius: 1.5rem;
+  border-color: #9caf88; /* Border menyala saat aktif */
+}
+
+selectedcontent p {
+  display: none;
+}
