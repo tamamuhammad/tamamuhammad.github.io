@@ -195,6 +195,20 @@ nav .nav-inner ul button:hover {
   .animate-slow-zoom {
     animation: slowZoom 5s ease-in-out infinite;
   }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
 }
 
 #about main,

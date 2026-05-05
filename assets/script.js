@@ -1,13 +1,14 @@
 const navLinks = document.querySelectorAll("nav .nav-inner ul a");
-const contents = document.querySelectorAll(".content");
-const temp = document.querySelector(".temp");
-const form = document.querySelector(".contact-form");
 const nav = document.querySelector("nav .nav-inner ul");
 const logo = document.querySelector("nav .nav-inner ul li#logo");
 const logoImg = document.querySelector("nav .nav-inner ul li#logo img");
 const themeToggleBtn = document.getElementById("theme-toggle");
 const darkIcon = document.getElementById("theme-toggle-dark-icon");
 const lightIcon = document.getElementById("theme-toggle-light-icon");
+const contents = document.querySelectorAll(".content");
+const temp = document.querySelector(".temp");
+const form = document.querySelector(".contact-form");
+const messageLink = document.querySelector("#footer a#contact-link");
 let isDarkMode = false;
 
 if (
@@ -25,7 +26,6 @@ if (
   logoImg.src = "assets/img/nav-icon-secondary.png";
 }
 
-// Event klik tombol
 themeToggleBtn.addEventListener("click", function () {
   darkIcon.classList.toggle("hidden");
   lightIcon.classList.toggle("hidden");
@@ -55,6 +55,10 @@ themeToggleBtn.addEventListener("click", function () {
       logoImg.src = "assets/img/nav-icon.png";
     }
   }
+
+  window.dispatchEvent(
+    new CustomEvent("themeChanged", { detail: { isDark: isDarkMode } }),
+  );
 });
 
 window.addEventListener("scroll", () => {
@@ -74,15 +78,26 @@ window.addEventListener("scroll", () => {
 
 function updateNav(e) {
   navLinks.forEach((nav) => {
-    if (e == nav) {
-      nav.classList.add("active");
+    if (e.id == "contact-link") {
+      if (
+        e.getAttribute("href").substring(1) ==
+        nav.getAttribute("href").substring(1)
+      ) {
+        nav.classList.add("active");
+      } else {
+        nav.classList.remove("active");
+      }
     } else {
-      nav.classList.remove("active");
+      if (e == nav) {
+        nav.classList.add("active");
+      } else {
+        nav.classList.remove("active");
+      }
     }
   });
 
   contents.forEach((content) => {
-    if (e.innerHTML.toLowerCase() == content.id) {
+    if (e.getAttribute("href").substring(1) == content.id) {
       content.classList.remove("hidden");
     } else {
       content.classList.add("hidden");
@@ -97,19 +112,64 @@ navLinks.forEach((nav) => {
   });
 });
 
-form.addEventListener("submit", function (e) {
+messageLink.addEventListener("click", () => {
+  updateNav(messageLink);
+  window.dispatchEvent(new Event("scroll"));
+});
+
+form.addEventListener("submit", async function (e) {
   e.preventDefault();
-  const name = document.querySelector(".contact-form input#name").value;
-  const email = document.querySelector(".contact-form input#email").value;
+
+  const name = document.querySelector(".contact-form input#name").value.trim();
+  const email = document
+    .querySelector(".contact-form input#email")
+    .value.trim();
   const subject = document.querySelector(".contact-form select#subject").value;
-  const body = document.querySelector(".contact-form textarea#body").value;
+  const body = document
+    .querySelector(".contact-form textarea#body")
+    .value.trim();
+
+  const button = form.querySelector("button[type='submit']");
+  button.disabled = true;
+  button.innerText = "Sending...";
+
   if (name && email && subject && body) {
-    window.open(
-      `mailto:maztamam67@gmail.com?subject=${subject}&body=Hi.%20My%20name%20is%20${name}%0D%0A%0D%0A${body}%20%3A%29`,
-    );
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "2808d9a8-7db5-44e9-9300-e233c88a31df",
+          name: name,
+          from_name: name,
+          email: email,
+          subject: subject,
+          message: body,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert(
+          "Pesan berhasil terkirim! Silahkan cek email Anda secara berkala.",
+        );
+        form.reset();
+      } else {
+        alert("Waduh, ada kesalahan saat mengirim pesan.");
+      }
+    } catch (error) {
+      console.log(error);
+      alert("Terjadi kesalahan jaringan.");
+    }
   } else {
-    alert("The input form is invalid!");
+    alert("Pastikan semua form sudah terisi dengan benar!");
   }
+  button.disabled = false;
+  button.innerText = "Send";
 });
 
 fetch(
@@ -130,39 +190,52 @@ document.addEventListener("DOMContentLoaded", () => {
   if (track && canvas) {
     const context = canvas.getContext("2d");
     let frameCount;
-    let currentFrame;
-
-    if (isDarkMode) {
-      frameCount = 108;
-      currentFrame = (index) =>
-        `assets/frames/dark/Presentation3_${index.toString().padStart(3, "0")}.png`;
-    } else {
-      frameCount = 92;
-      currentFrame = (index) =>
-        `assets/frames/light/Presentation2_${index.toString().padStart(3, "0")}.png`;
-    }
-
-    const images = [];
+    let images = [];
     let loadedImages = 0;
 
-    for (let i = 1; i <= frameCount; i++) {
-      const img = new Image();
-      img.src = currentFrame(i);
-      img.onload = () => {
-        loadedImages++;
-        if (loadedImages === 1) {
-          canvas.width = images[0].width;
-          canvas.height = images[0].height;
-          context.drawImage(images[0], 0, 0);
-        }
-      };
-      images.push(img);
-    }
-
-    // 3. Logika Scroll
     let targetFrameIndex = 0;
     let currentFrameIndex = 0;
-    const easing = 0.1; // Efek pegas
+    const easing = 0.1;
+
+    const loadCanvasImages = (isDarkTheme) => {
+      images = [];
+      loadedImages = 0;
+      targetFrameIndex = 0;
+      currentFrameIndex = 0;
+
+      let currentFrame;
+      if (isDarkTheme) {
+        frameCount = 108;
+        currentFrame = (index) =>
+          `assets/frames/dark/Presentation3_${index.toString().padStart(3, "0")}.png`;
+      } else {
+        frameCount = 92;
+        currentFrame = (index) =>
+          `assets/frames/light/Presentation2_${index.toString().padStart(3, "0")}.png`;
+      }
+
+      for (let i = 1; i <= frameCount; i++) {
+        const img = new Image();
+        img.src = currentFrame(i);
+        img.onload = () => {
+          loadedImages++;
+          if (loadedImages === 1) {
+            canvas.width = images[0].width;
+            canvas.height = images[0].height;
+            context.drawImage(images[0], 0, 0);
+          }
+        };
+        images.push(img);
+      }
+    };
+
+    loadCanvasImages(isDarkMode);
+
+    window.addEventListener("themeChanged", (e) => {
+      loadCanvasImages(e.detail.isDark);
+
+      window.dispatchEvent(new Event("scroll"));
+    });
 
     window.addEventListener("scroll", () => {
       if (aboutSection.classList.contains("hidden")) return;
@@ -193,14 +266,17 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
 
-    // 4. Loop Animasi (Render Engine)
     const updateCanvas = () => {
       currentFrameIndex += (targetFrameIndex - currentFrameIndex) * easing;
 
       const indexToDraw = Math.round(currentFrameIndex);
-      if (images[indexToDraw] && loadedImages === frameCount) {
-        context.clearRect(0, 0, canvas.width, canvas.height); // Bersihkan canvas lama
-        context.drawImage(images[indexToDraw], 0, 0); // Gambar frame baru
+      if (
+        images.length > 0 &&
+        images[indexToDraw] &&
+        loadedImages === frameCount
+      ) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.drawImage(images[indexToDraw], 0, 0);
       }
 
       window.requestAnimationFrame(updateCanvas);
