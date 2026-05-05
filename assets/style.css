@@ -219,8 +219,15 @@ nav .nav-inner ul button:hover {
 
   animation: reveal linear forwards;
   animation-timeline: --revealing-section;
+}
 
-  animation-range: entry 0% cover 12%;
+#about main {
+  animation-range: entry 0% cover 8%;
+}
+
+#works main,
+#contact main {
+  animation-range: entry 0% cover 10%;
 }
 
 @keyframes blink {

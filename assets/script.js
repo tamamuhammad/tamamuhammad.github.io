@@ -66,8 +66,9 @@ window.addEventListener("scroll", () => {
     document.documentElement.scrollHeight - window.innerHeight;
 
   const scrollPercent = (window.scrollY / totalHeight) * 100;
+  const threshold = window.innerWidth < 768 ? 0.75 : 4.5;
 
-  if (scrollPercent >= 4.5) {
+  if (scrollPercent >= threshold) {
     nav.classList.add("scrolled-nav");
     logo.classList.remove("logo");
   } else {
